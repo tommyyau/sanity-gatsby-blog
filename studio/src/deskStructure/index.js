@@ -15,7 +15,7 @@ import {FaSitemap, FaTag, FaTags, FaNewspaper, FaBuffer, FaSlidersH} from 'react
 import {GiSpray, GiCherish, GiHairStrands} from 'react-icons/gi'
 // ran npm install react
 // ran npm install font-awesome
-
+import article from './article'
 import IframePreview from '../previews/IframePreview'
 
 // Web preview configuration
@@ -82,30 +82,7 @@ export default () =>
         ),
 
       S.divider(),
-      S.listItem()
-        .title('Articles')
-        .icon(FaNewspaper)
-        .child(
-          S.list()
-            .title('Article Type')
-            .items([
-              S.listItem()
-                .title('Feature')
-                .icon(FaNewspaper)
-                .schemaType('featureArticle')
-                .child(S.documentTypeList('featureArticle').title('Features')),
-              S.listItem()
-                .title('Gallery')
-                .icon(FaNewspaper)
-                .schemaType('galleryArticle')
-                .child(S.documentTypeList('galleryArticle').title('Gallery')),
-              S.listItem()
-                .title('How To')
-                .icon(FaNewspaper)
-                .schemaType('howToArticle')
-                .child(S.documentTypeList('howToArticle').title('HowTo'))
-            ])
-        ),
+      article,
       S.listItem()
         .title('Product')
         .icon(GiSpray)

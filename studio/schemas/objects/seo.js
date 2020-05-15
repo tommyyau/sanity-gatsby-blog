@@ -25,7 +25,8 @@ export default {
       name: 'metaDescription',
       type: 'text',
       title: 'Description',
-      rows: 2,
+      validation: (Rule) =>
+      Rule.max(160).error('Please keep the SEO description below 160 characters.'),
       description: 'META-DESCRIPTION'
     }
   ]
