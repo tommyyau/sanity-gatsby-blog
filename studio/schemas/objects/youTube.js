@@ -33,5 +33,6 @@ export default {
       url: 'url'
     },
     component: Preview
-  }
+  },
+  {name: 'heroImage', type: 'figure', title: 'Video Cover Image'}
 }
